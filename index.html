@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">Home Expense Tracker</header>
+        
+        <div class="grid">
+            <div class="card">
+                <h2>Add Expense</h2>
+                <form id="expenseForm">
+                    <input type="text" id="expenseName" placeholder="Name" required>
+                    <input type="number" id="expenseAmount" placeholder="Amount" required>
+                    <input type="date" id="expenseDate" required>
+                    <button type="submit">➕ Add Expense</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Add Income</h2>
+                <form id="incomeForm">
+                    <input type="text" id="incomeName" placeholder="Source" required>
+                    <input type="number" id="incomeAmount" placeholder="Amount" required>
+                    <input type="date" id="incomeDate" required>
+                    <button type="submit">💰 Add Income</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Filter</h2>
+            <form id="periodForm">
+                <div class="grid">
+                    <input type="date" id="startDate" required>
+                    <input type="date" id="endDate" required>
+                    <button type="submit">🔍 Filter</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Totals</h2>
+            <div class="totals">
+                <p>Expenses: <span id="totalExpenses">0</span></p>
+                <p>Income: <span id="totalIncome">0</span></p>
+                <p>Balance: <span id="netBalance">0</span></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Transactions</h2>
+            <table id="transactionTable">
+                <thead><tr><th>Type</th><th>Name</th><th>Amount</th><th>Date</th><th>Action</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
